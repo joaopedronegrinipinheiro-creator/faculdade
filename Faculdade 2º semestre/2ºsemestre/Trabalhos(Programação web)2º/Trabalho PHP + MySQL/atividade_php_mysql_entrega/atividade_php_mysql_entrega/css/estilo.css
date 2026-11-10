@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f2f3f7;
+    color: #252536;
+}
+
+.topo {
+    background: #24243a;
+    color: white;
+    padding: 20px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.topo h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    width: min(1100px, 90%);
+    margin: 35px auto;
+}
+
+.grade {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+}
+
+.card, .formulario {
+    background: white;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,.07);
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.preco {
+    color: #287a50;
+    font-weight: bold;
+    font-size: 19px;
+}
+
+.formulario {
+    width: min(460px, 92%);
+    margin: 55px auto;
+}
+
+.formulario h1 {
+    margin-top: 0;
+}
+
+label {
+    display: block;
+    margin: 15px 0 6px;
+    font-weight: bold;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #c9c9d2;
+    border-radius: 6px;
+    font: inherit;
+}
+
+button, .botao {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 11px 18px;
+    background: #4d55b5;
+    color: white;
+    border: 0;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover, .botao:hover {
+    background: #373e91;
+}
+
+.erro {
+    color: #b42318;
+}
+
+.sucesso {
+    color: #167044;
+    background: #e3f5eb;
+    padding: 12px;
+    border-radius: 6px;
+}
+
+.aviso {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.tabela-responsiva {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th, td {
+    padding: 13px;
+    border-bottom: 1px solid #e5e5eb;
+    text-align: left;
+}
+
+th {
+    background: #e8e9f2;
+}
+
+.acoes a {
+    margin-right: 10px;
+}
+
+@media (max-width: 600px) {
+    .topo {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

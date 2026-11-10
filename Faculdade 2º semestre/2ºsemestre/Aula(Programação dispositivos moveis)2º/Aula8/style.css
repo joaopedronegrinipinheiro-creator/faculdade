@@ -1,0 +1,103 @@
+body{
+	margin: 0;
+	font-family: arial, sans-serif;
+}
+a{text-decoration: none;}
+header{
+	background: #000;
+	display: flex;
+	justify-content: space-between;
+	padding: 0px 30px 5px 30px;
+	align-items: center;
+}
+.menu{
+	list-style: none;
+	padding: 0;
+	display: flex;
+	align-items: center;	
+}
+.menu li a{
+	margin: 8px;
+	color: #fff;
+	text-shadow: 1px 1px 1px #999;
+	transition: all 0.3s linear;	
+}
+.menu li a:hover{
+	color: #617eed;
+}
+.logo{
+	font-size: 38px;
+	color: #617eed;
+	font-style: italic;
+	font-weight: bold;
+}
+#banner img{
+	width: 100%;
+}
+
+.menu-responsive a{
+	display: none;	
+	width: 20px;
+	height: 15px;
+	border-bottom: solid 2px #fff;
+	position: relative;
+}
+.menu-responsive a::before{
+	content: "";
+	display: block;
+	width: 10px;
+	height: 2px;
+	background: #fff;
+	position: absolute;
+	right: 0;
+	top: 0px;
+	transition: all 0.3s ease;
+}
+.menu-responsive a:hover::before{
+	width: 20px;
+}
+.menu-responsive a::after{
+	content: "";
+	display: block;
+	width: 20px;
+	height: 2px;
+	background: #fff;
+	margin-top: 5px;
+	position: absolute;
+	top: 3px;
+}
+
+#menu-oculto{
+	position: fixed;
+	width: 200px;
+	padding: 25px 10px;
+	height: 100vh;
+	background: #f7f7f7;
+	top: 0;
+	display: none;
+}
+.menu-lateral{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.menu-lateral li a{
+	color: #333;
+	display: block;
+	padding: 10px 15px;
+	border-bottom: dashed 1px #ddd;
+	text-align: center;
+	font-weight: bold;
+}
+.menu-lateral li a:hover{
+	color: #617eed;
+	background: #000;
+	border-radius: 3px;
+	border: none;
+}
+
+@media (max-width: 560px){
+	.menu li{display: none}
+	.menu-responsive a{display: block;}
+	.menu-responsive{display: block !important;}	
+}

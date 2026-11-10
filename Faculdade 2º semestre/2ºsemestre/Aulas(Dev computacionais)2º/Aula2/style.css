@@ -1,0 +1,137 @@
+/*Nome da tag*/
+p {
+    font-size: 16px;
+    color: #555;
+    font-family: verdana, sans-serif;
+}
+
+/* class */
+.titulo {
+    font-family: helvetica, sans-serif;
+    color: #f60;
+}
+
+/* id # */
+#destaque {
+    background: #333;
+    padding: 5px 10px;
+    border: solid 2px #000;
+    color: #fff;
+}
+
+/* tag junto com class */
+h1.titulo {
+    text-decoration: underline;
+}
+
+/* Seletor irmão adjacente (Primeiro irmão) */
+h1+p {
+    color: #f60;
+}
+
+/* Seletor todos os elementos irmão (~) */
+h2+p {
+    border: solid 2px #333;
+}
+
+p a {
+    text-decoration: none;
+}
+
+/* Filho direto (>)*/
+p>a {
+    background: #000;
+    color: #fff;
+}
+
+.menu li {
+    list-style: none;
+    font-size: 18px;
+    display: inline-block;
+    padding: 5px;
+    border-left: solid 2px #333;
+}
+
+/* Primeiro filho */
+.menu li:first-child {
+    border: none;
+}
+
+/* Primeiro filho */
+.menu li:last-child {
+    border: none;
+    background: #f60;
+    color: #fff;
+    border-radius: 5px 20px;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-left: 15px;
+}
+
+/* Escolher o numero do elemento que vai ser utilizado*/
+.lista li:nth-child(3) {
+    color: blue;
+}
+
+/* Odd chama todos os elementos ímpares*/
+.lista li:nth-child(odd) {
+    background: #ddd;
+}
+
+/*even seleciona todos os elementos pares*/
+.lista li:nth-child(even) {
+    background: #333 color: #ddd
+}
+
+.lista li:nth-child(2n + 1) {
+    color: #f60
+}
+
+.title-destaque{
+    font-size: 64px;
+    font-family: "Bitcount Prop Single", system-ui;
+    text-align: center;
+    margin: 100px 0;
+}
+
+/* Pseudo Elemento*/
+.title-destaque::before {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 5px;
+    background: #f60;
+    margin: 0 auto;
+}
+
+.title-destaque::after {
+    content: "";
+    display: block;
+    width: 250px;
+    height: 5px;
+    background: #f60;
+    margin: 0 auto;
+}
+
+.titulo+div p {
+    font-size: 18px;
+    margin-bottom: 80px;
+}
+
+/* Primeira letra*/
+.titulo+div p::first-letter {
+    font-size: 58px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+/* Primeira linha*/
+.titulo+div p::first-line {
+    color: #999
+}
+
+/* Mudar elemento seleciona (mouse)*/
+h2.titulo::selection {
+    background: #000;
+    color: #ddd;
+}

@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.fundo {
+    width: 100%;
+    height: 1000px;
+
+    background-color: #f27078;
+    border-bottom: 4px solid red;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Esconde todas inicialmente */
+.carro,
+.moto,
+.bicicleta {
+    display: none;
+    max-width: 250px;
+    max-height: 250px;
+}
+
+/* COMPUTADOR - maior que 642px */
+@media (min-width: 643px) {
+
+    .carro {
+        display: block;
+    }
+
+}
+
+/* TABLET - de 497px até 642px */
+@media (min-width: 497px) and (max-width: 642px) {
+
+    .moto {
+        display: block;
+    }
+
+}
+
+/* CELULAR - menor que 497px */
+@media (max-width: 496px) {
+
+    .bicicleta {
+        display: block;
+    }
+
+}

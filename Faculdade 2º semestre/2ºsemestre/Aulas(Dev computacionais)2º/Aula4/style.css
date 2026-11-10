@@ -1,0 +1,98 @@
+.move {
+    width: 100px;
+    height: 100px;
+    background: blue;
+    border-radius: 5px;
+    animation-name: cores;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.foguete img {
+    animation: nave 5s ease infinite alternate;
+}
+
+@keyframes cores {
+    from {
+        background: blue;
+        margin: 0;
+        transform: rotate(0);
+    }
+    to {
+        background: red;
+        margin-left: 85%;
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes nave {
+    0% {
+        margin-left: 0;
+        transform: rotate(0deg);
+    }
+    10% {
+        margin-left: 0;
+        transform: rotate(45deg);
+    }
+    50% {
+        margin-left: calc(100% - 75px);
+        transform: rotate(45deg);
+    }
+    60% {
+        margin-left: calc(100% - 75px);
+        transform: rotate(-135deg);
+    }
+    95% {
+        margin-left: 0;
+        transform: rotate(-135deg);
+    }
+    100% {
+        margin-left: 0;
+        transform: rotate(0deg);
+    }
+}
+body{ margin: 0;}
+.topo{
+    background: linear-gradient(blue, darkblue);
+    padding: 10px 5px;
+    margin-bottom: 100px;
+}
+.logo img{
+    transform: translate(10px);
+    animation: logo 3s ease-in forwards;
+}
+@keyframes logo{
+    0%{transform: translateX(-140px);}
+    30%{transform: translate(100px, 30px)}
+    50%{transform: translateX(200px, -25px)}
+    60%{transform: translateX(300px, 0px)}
+    75%{transform: translateX(400px, -30px)}
+    90%{transform: translateX(450px, 10px)}
+    100%{transform: translateX(500px, -15px)}
+}
+.load{
+    margin: 80px;
+    text-align: center;
+}
+.load .circle{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: yellow;
+    display: inline-block;
+    margin: 0 7px;
+    animation: load 3s linear infinite alternate;
+}
+.load .circle:nth-child(2){ animation-delay: 1s;}
+.load .circle:nth-child(3){ animation-delay: 2s;}
+.load .circle:nth-child(4){ animation-delay: 3s;}
+.load .circle:nth-child(5){ animation-delay: 4s;}
+
+@keyframes load{
+    0%{background: yellow; transform: scale(1);}
+    33%{background: blue; transform: scale(1.1);}
+    66%{background: red; transform: scale(1.2);}
+    100%{background: blue; transform: scale(1.3);}
+}

@@ -1,0 +1,355 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #101010;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+}
+
+
+/* =========================
+   TOPO
+========================= */
+
+.topo {
+    height: 52px;
+    border-bottom: 1px solid #292929;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 18px;
+
+    position: relative;
+}
+
+
+/* Botão comunidade */
+
+.comunidade {
+    background: #181818;
+    border: 1px solid #292929;
+    color: #ddd;
+
+    border-radius: 5px;
+
+    padding: 8px 12px;
+
+    font-size: 13px;
+
+    cursor: pointer;
+}
+
+.comunidade span {
+    margin-left: 6px;
+    color: #aaa;
+}
+
+
+/* Navegação */
+
+nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    gap: 27px;
+}
+
+nav a {
+    color: #888;
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition: 0.2s;
+}
+
+nav a:hover {
+    color: white;
+}
+
+nav .ativo {
+    color: white;
+}
+
+nav span {
+    color: #888;
+    margin-left: 3px;
+}
+
+
+/* Pesquisa */
+
+.pesquisa {
+    margin-left: auto;
+
+    width: 220px;
+    height: 34px;
+
+    border: 1px solid #292929;
+    background: #181818;
+
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 10px;
+
+    color: #777;
+}
+
+.pesquisa span {
+    font-size: 20px;
+    margin-right: 7px;
+}
+
+.pesquisa input {
+    width: 100%;
+
+    background: transparent;
+    border: none;
+    outline: none;
+
+    color: white;
+
+    font-size: 12px;
+}
+
+.pesquisa input::placeholder {
+    color: #777;
+}
+
+
+/* =========================
+   CONTEÚDO
+========================= */
+
+.conteudo {
+    max-width: 1440px;
+    margin: 0 auto;
+
+    padding: 72px 28px;
+}
+
+
+/* Título */
+
+.cabecalho h1 {
+    font-size: 30px;
+    font-weight: 700;
+
+    margin-bottom: 12px;
+}
+
+.cabecalho p {
+    color: #999;
+
+    font-size: 16px;
+}
+
+
+/* =========================
+   ABAS
+========================= */
+
+.abas {
+    margin-top: 92px;
+
+    display: flex;
+    gap: 4px;
+
+    margin-left: 8px;
+}
+
+.abas button {
+    background: transparent;
+    border: none;
+
+    color: #888;
+
+    padding: 9px 12px;
+
+    border-radius: 9px;
+
+    font-size: 13px;
+
+    cursor: pointer;
+}
+
+.abas .selecionada {
+    background: #252525;
+    color: white;
+    font-weight: 600;
+}
+
+
+/* =========================
+   GALERIA
+========================= */
+
+.galeria {
+    margin-top: 16px;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 26px 18px;
+}
+
+
+/* Card */
+
+.card {
+    min-width: 0;
+}
+
+
+/* Imagem */
+
+.card img {
+    width: 100%;
+
+    aspect-ratio: 1.68 / 1;
+
+    object-fit: cover;
+
+    border-radius: 13px;
+
+    display: block;
+
+    border: 1px solid #292929;
+
+    transition: 0.25s;
+}
+
+.card img:hover {
+    transform: translateY(-2px);
+    border-color: #444;
+}
+
+
+/* Informações */
+
+.informacoes {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 9px;
+}
+
+.informacoes h2 {
+    font-size: 15px;
+
+    font-weight: 500;
+
+    margin-bottom: 5px;
+}
+
+.informacoes p {
+    color: #777;
+
+    font-size: 12px;
+}
+
+
+/* Botão Abrir */
+
+.informacoes button {
+    background: #292929;
+
+    border: none;
+
+    color: #eee;
+
+    padding: 8px 14px;
+
+    border-radius: 8px;
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.informacoes button:hover {
+    background: #3a3a3a;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 1000px) {
+
+    .galeria {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+
+@media (max-width: 750px) {
+
+    nav {
+        display: none;
+    }
+
+    .pesquisa {
+        width: 180px;
+    }
+
+    .galeria {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .conteudo {
+        padding-top: 45px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .topo {
+        padding: 0 10px;
+    }
+
+    .comunidade {
+        display: none;
+    }
+
+    .pesquisa {
+        width: 180px;
+    }
+
+    .conteudo {
+        padding: 40px 15px;
+    }
+
+    .cabecalho h1 {
+        font-size: 26px;
+    }
+
+    .abas {
+        margin-top: 60px;
+    }
+
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+
+}
